@@ -8,8 +8,8 @@ add_library(cryptoTools STATIC ${SRCS})
 # make projects that include cryptoTools use this as an include folder
 target_include_directories(cryptoTools PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/..")
 
-target_compile_options(cryptoTools PUBLIC $<$<COMPILE_LANGUAGE:CXX>:-std=c++14> -pthread)
-target_link_options(cryptoTools PUBLIC -pthread)
+target_compile_options(cryptoTools PUBLIC $<$<COMPILE_LANGUAGE:CXX>:-std=c++14> -pthread -latomic)
+target_link_options(cryptoTools PUBLIC -pthread -latomic)
 
 if(ENABLE_SSE)
     target_compile_options(cryptoTools PRIVATE -maes -msse2 -msse3 -msse4.1 -mpclmul)

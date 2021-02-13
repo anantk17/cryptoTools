@@ -49,7 +49,7 @@ option(ENABLE_CIRCUITS  "compile the circuit module" OFF)
 option(ENABLE_CPP_14    "compile with the c++14" ON)
 option(ENABLE_NET_LOG   "compile with network logging" OFF)
 option(ENABLE_WOLFSSL   "conpiler with WolfSSL enabled" OFF)
-option(ENABLE_SSE       "compile with SSE instrctions" ON)
+option(ENABLE_SSE       "compile with SSE instrctions" OFF)
 option(ENABLE_BOOST     "compile with BOOST networing integration" ON)
 
 set(ENABLE_FULL_GSL ${ENABLE_CPP_14})
